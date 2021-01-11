@@ -111,14 +111,27 @@
                     <div class="section-header">
                         <h1>Jadwal</h1>
                     </div>
-
                     <div class="section-body">
                         <h2 class="section-title">Jadwal</h2>
                         <p class="section-lead">
-                            Halaman kelola seluruh Jadwal.
+                            Halaman seluruh Jadwal.
                         </p>
 
                         <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-info alert-dismissible show fade">
+                                    <div class="alert-body">
+                                        <button class="close" data-dismiss="alert">
+                                            <span>x</span>
+                                        </button>
+                                        
+                                        <span style="font-size: 16px;">
+                                            <i class="fas fa-info pr-2"></i>
+                                            <strong>Selain mahasiswa/i yang bersangkutan, hanya bisa melihat Seminar Proposal dan Seminar Hasil saja.</strong>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-12">
                                 <div class="card card-primary">
                                     <div class="card-header">
@@ -175,7 +188,7 @@
                                                         <td>12:00, 8-01-2021</td>
                                                         <td>B2-304</td>
                                                         <td>
-                                                            <a href="jadwalDetail.html" class="btn btn-secondary">Detail</a>
+                                                            <a href="" class="btn btn-secondary" onclick="return sidangAkhir()">Detail</a>
                                                         </td>
                                                     </tr>
                                                 </tbody>
@@ -217,6 +230,7 @@
     <script src="../../assets/template/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
     <script src="../../assets/template/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
     <script src="../../assets/template/modules/jquery-selectric/jquery.selectric.min.js"></script>
+    <script src="../../assets/template/modules/sweetalert/sweetalert.min.js"></script>
     <script src="../../assets/template/modules/jquery-ui/jquery-ui.min.js"></script>
 
     <!-- Page Specific JS File -->
@@ -224,6 +238,18 @@
 
     <!-- Template JS File -->
     <script src="../../assets/template/js/scripts.js"></script>
+
+    <script>
+        function sidangAkhir() {
+            swal(
+                'INFO SEMINAR', 'Untuk seminar Sidang Akhir, hanya yang bersangkutan saja, mahasiswa/i lain tidak bisa mendaftar!', 'info'
+            ).then((data) => {
+                location.reload();
+            });
+
+            return false;
+        }
+    </script>
 </body>
 
 </html>
