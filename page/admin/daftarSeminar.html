@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin SISTA - Daftar Seminar TA</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../../assets/landingPage/landing/stisla.png">
+    
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="../../assets/template/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/fontawesome/css/all.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/datatables.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../../assets/template/css/style.css">
+    <link rel="stylesheet" href="../../assets/template/css/components.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <!-- Start Navbar -->
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <form class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search-element">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-backdrop"></div>
+                    </div>
+                </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown"><a href="#" data-toggle="dropdown"
+                            class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img alt="image" src="../../assets/template/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                            <div class="d-sm-none d-lg-inline-block">Hi, Admin</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-title">Login 5 menit lalu</div>
+                            <a href="profileAdmin.html" class="dropdown-item has-icon">
+                                <i class="far fa-user"></i> Profile Admin
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../../index.html" class="dropdown-item has-icon text-danger">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Navbar -->
+
+            <!-- Start Sidebar -->
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="dashboard.html">SISTA</a>
+                    </div>
+                    <div class="sidebar-brand sidebar-brand-sm">
+                        <a href="dashboard.html">SIS</a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Dashboard</li>
+                        <li>
+                            <a href="dashboard.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="menu-header">Kelola Admin</li>
+                        <li class="active">
+                            <a href="daftarSeminar.html" class="nav-link">
+                                <i class="fas fa-book"></i>
+                                <span>Daftar Seminar TA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pemakalahSeminar.html" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span>Pemakalah Seminar TA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pendaftaranPesertaSeminar.html" class="nav-link">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Daftar Peserta Seminar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="registrasiUser.html" class="nav-link">
+                                <i class="fas fa-users-cog"></i>
+                                <span>Registrasi User</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- End Sidebar -->
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h1>Daftar Seminar TA</h1>
+                        <div class="section-header-breadcrumb">
+                            <div class="breadcrumb-item active"><a href="dashboard.html">Dashboard</a></div>
+                            <div class="breadcrumb-item">Kelola Admin</div>
+                            <div class="breadcrumb-item">Daftar Seminar TA</div>
+                        </div>
+                    </div>
+
+                    <div class="section-body">
+                        <h2 class="section-title">Daftar Seminar TA</h2>
+                        <p class="section-lead">
+                            Halaman kelola seluruh Daftar Seminar TA.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h4>Table Daftar Seminar TA</h4>
+                                        <div class="card-header-action">
+                                            <a href="pemakalahSeminar.html" type="submit" class="btn btn-primary">
+                                                <i class="fas fa-plus"></i>
+                                                Tambah
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped" id="table-1">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th>NO</th>
+                                                        <th>NIM</th>
+                                                        <th>Mahasiswa/i</th>
+                                                        <th>Seminar</th>
+                                                        <th>Waktu</th>
+                                                        <th>Ruangan</th>
+                                                        <th>Peserta</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-center" id="seminar">
+                                                        <td>1</td>
+                                                        <td>
+                                                            <span class="badge badge-primary">0102002</span>
+                                                        </td>
+                                                        <td>Diego Armando</td>
+                                                        <td>Proposal</td>
+                                                        <td>10:00, 4-01-2021</td>
+                                                        <td>Online</td>
+                                                        <td>10 (view)</td>
+                                                        <td>
+                                                            <a href="daftarSeminarEdit.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Ubah Data">
+                                                                <i class="fas fa-edit btn btn-warning btn-sm"></i>
+                                                            </a>
+                                                            <a href="" data-toggle="modal" data-target="#modalHapus">
+                                                                <i class="fas fa-trash-alt btn btn-danger btn-sm"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center" id="seminar_2">
+                                                        <td>2</td>
+                                                        <td>
+                                                            <span class="badge badge-primary">0102001</span>
+                                                        </td>
+                                                        <td>Ahmad Budiman</td>
+                                                        <td>Seminar Hasil</td>
+                                                        <td>13:00, 4-01-2021</td>
+                                                        <td>Online</td>
+                                                        <td>10 (view)</td>
+                                                        <td>
+                                                            <a href="daftarSeminarEdit.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Ubah Data">
+                                                                <i class="fas fa-edit btn btn-warning btn-sm"></i>
+                                                            </a>
+                                                            <a href="" data-toggle="modal" data-target="#modalHapus_2">
+                                                                <i class="fas fa-trash-alt btn btn-danger btn-sm"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center" id="seminar_3">
+                                                        <td>3</td>
+                                                        <td>
+                                                            <span class="badge badge-primary">0102040</span>
+                                                        </td>
+                                                        <td>Fradelina Putri</td>
+                                                        <td>Sidang Akhir</td>
+                                                        <td>12:00, 8-01-2021</td>
+                                                        <td>B2-304</td>
+                                                        <td>0 (view)</td>
+                                                        <td>
+                                                            <a href="daftarSeminarEdit.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Ubah Data">
+                                                                <i class="fas fa-edit btn btn-warning btn-sm"></i>
+                                                            </a>
+                                                            <a href="" data-toggle="modal" data-target="#modalHapus_3">
+                                                                <i class="fas fa-trash-alt btn btn-danger btn-sm"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End Content -->
+
+            <!-- Start Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    &copy; SISTA - SI05 2020
+                </div>
+                <div class="footer-right">
+                    STT Terpadu Nurul Fikri
+                </div>
+            </footer>
+            <!-- End Footer -->
+        </div>
+    </div>
+
+    <!-- Start Modal Hapus -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalHapus">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah anda yakin ingin menghapus data ini?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger" onclick="return konfirmasiHapus()">Hapus</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <!-- Start Modal Hapus 2 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalHapus_2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah anda yakin ingin menghapus data ini?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger" onclick="return konfirmasiHapus_2()">Hapus</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <!-- Start Modal Hapus 3 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalHapus_3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah anda yakin ingin menghapus data ini?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger" onclick="return konfirmasiHapus_3()">Hapus</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- General JS Scripts -->
+    <script src="../../assets/template/modules/jquery.min.js"></script>
+    <script src="../../assets/template/modules/popper.js"></script>
+    <script src="../../assets/template/modules/tooltip.js"></script>
+    <script src="../../assets/template/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/template/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../assets/template/modules/moment.min.js"></script>
+    <script src="../../assets/template/js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="../../assets/template/modules/datatables/datatables.min.js"></script>
+    <script src="../../assets/template/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/template/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+    <script src="../../assets/template/modules/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="../../assets/template/js/page/modules-datatables.js"></script>
+
+    <!-- Template JS File -->
+    <script src="../../assets/template/js/scripts.js"></script>
+
+    <script>
+        // konfirmasi Hapus
+        function konfirmasiHapus() {
+            let seminar = document.getElementById("seminar");
+
+            swal(
+                'Berhasil', 'Data berhasil di hapus!', 'success'
+            ).then((data) => {
+                $("#modalHapus").modal('hide');
+            });
+
+            seminar.parentElement.removeChild(seminar); 
+            console.log("Seminar berhasil dihapus");
+        }
+
+        function konfirmasiHapus_2() {
+            let seminar_2 = document.getElementById("seminar_2");
+
+            swal(
+                'Berhasil', 'Data berhasil di hapus!', 'success'
+            ).then((data) => {
+                $("#modalHapus_2").modal('hide');
+            });
+
+            seminar_2.parentElement.removeChild(seminar_2); 
+            console.log("Seminar berhasil dihapus");
+        }
+
+        function konfirmasiHapus_3() {
+            let seminar_3 = document.getElementById("seminar_3");
+
+            swal(
+                'Berhasil', 'Data berhasil di hapus!', 'success'
+            ).then((data) => {
+                $("#modalHapus_3").modal('hide');
+            });
+
+            seminar_3.parentElement.removeChild(seminar_3); 
+            console.log("Seminar berhasil dihapus");
+        }
+    </script>
+</body>
+
+</html>

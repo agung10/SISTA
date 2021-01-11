@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN SISTA - Registrasi User</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../../assets/landingPage/landing/stisla.png">
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="../../assets/template/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/fontawesome/css/all.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/datatables.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../../assets/template/css/style.css">
+    <link rel="stylesheet" href="../../assets/template/css/components.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <!-- Start Navbar -->
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <form class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search-element">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-backdrop"></div>
+                    </div>
+                </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown"><a href="#" data-toggle="dropdown"
+                            class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img alt="image" src="../../assets/template/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                            <div class="d-sm-none d-lg-inline-block">Hi, Admin</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-title">Login 5 menit lalu</div>
+                            <a href="profileAdmin.html" class="dropdown-item has-icon">
+                                <i class="far fa-user"></i> Profile Admin
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../../index.html" class="dropdown-item has-icon text-danger">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Navbar -->
+
+            <!-- Start Sidebar -->
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="dashboard.html">SISTA</a>
+                    </div>
+                    <div class="sidebar-brand sidebar-brand-sm">
+                        <a href="dashboard.html">SIS</a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Dashboard</li>
+                        <li>
+                            <a href="dashboard.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="menu-header">Kelola Admin</li>
+                        <li>
+                            <a href="daftarSeminar.html" class="nav-link">
+                                <i class="fas fa-book"></i>
+                                <span>Daftar Seminar TA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pemakalahSeminar.html" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span>Pemakalah Seminar TA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pendaftaranPesertaSeminar.html" class="nav-link">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Daftar Peserta Seminar</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="registrasiUser.html" class="nav-link">
+                                <i class="fas fa-users-cog"></i>
+                                <span>Registrasi User</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- End Sidebar -->
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h1>Registrasi User</h1>
+                        <div class="section-header-breadcrumb">
+                            <div class="breadcrumb-item active"><a href="dashboard.html">Dashboard</a></div>
+                            <div class="breadcrumb-item">Kelola Admin</div>
+                            <div class="breadcrumb-item">Registrasi User</div>
+                        </div>
+                    </div>
+
+                    <div class="section-body">
+                        <h2 class="section-title">Registrasi User</h2>
+                        <p class="section-lead">
+                            Halaman kelola seluruh registrasi user.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h4>Table Registrasi User</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped" id="table-1">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th>NO</th>
+                                                        <th>Username</th>
+                                                        <th>Email</th>
+                                                        <th>Status Verifikasi</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-center" id="user">
+                                                        <td>1</td>
+                                                        <td>Wati</td>
+                                                        <td>wati@gmail.com</td>
+                                                        <td>
+                                                            <span class="badge badge-success">Terverifikasi</span>
+                                                        </td>
+                                                        <td>
+                                                            <a href="registrasiUserDetail.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Detail Data">
+                                                                <i class="fas fa-info-circle btn btn-primary btn-sm"></i>
+                                                            </a>
+                                                            <a href="registrasiUserEdit.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Ubah Data">
+                                                                <i class="fas fa-edit btn btn-warning btn-sm"></i>
+                                                            </a>
+                                                            <a href="" data-toggle="modal" data-target="#modalHapus">
+                                                                <i class="fas fa-trash-alt btn btn-danger btn-sm"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center" id="user_2">
+                                                        <td>2</td>
+                                                        <td>Wawan</td>
+                                                        <td>wawan@gmail.com</td>
+                                                        <td id="confirmVerif">
+                                                            <a href="" data-toggle="modal" data-target="#modalVerifikasi">Verifikasi</a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="registrasiUserDetail.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Detail Data">
+                                                                <i class="fas fa-info-circle btn btn-primary btn-sm"></i>
+                                                            </a>
+                                                            <a href="registrasiUserEdit.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Ubah Data">
+                                                                <i class="fas fa-edit btn btn-warning btn-sm"></i>
+                                                            </a>
+                                                            <a href="" data-toggle="modal" data-target="#modalHapus_2">
+                                                                <i class="fas fa-trash-alt btn btn-danger btn-sm"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center" id="user_3">
+                                                        <td>3</td>
+                                                        <td>Ali</td>
+                                                        <td>ali@gmail.com</td>
+                                                        <td id="confirmVerif_2">
+                                                            <a href="" data-toggle="modal" data-target="#modalVerifikasi_2">Verifikasi</a>
+                                                        </td>
+                                                        <td>
+                                                            <a href="registrasiUserDetail.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Detail Data">
+                                                                <i class="fas fa-info-circle btn btn-primary btn-sm"></i>
+                                                            </a>
+                                                            <a href="registrasiUserEdit.html" style="text-decoration:none;" data-toggle="tooltip" data-original-title="Ubah Data">
+                                                                <i class="fas fa-edit btn btn-warning btn-sm"></i>
+                                                            </a>
+                                                            <a href="" data-toggle="modal" data-target="#modalHapus_3">
+                                                                <i class="fas fa-trash-alt btn btn-danger btn-sm"></i>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- <tr id="registrasiUserEmpty" class="odd">
+                                                        <td valign="top" colspan="7" class="dataTables_empty">No data available in table</td>
+                                                    </tr> -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End Content -->
+
+            <!-- Start Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    &copy; SISTA - SI05 2020
+                </div>
+                <div class="footer-right">
+                    STT Terpadu Nurul Fikri
+                </div>
+            </footer>
+            <!-- End Footer -->
+        </div>
+    </div>
+
+    <!-- Start Modal Hapus -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalHapus">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah anda yakin ingin menghapus data ini?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger" onclick="return konfirmasiHapus()">Hapus</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <!-- Start Modal Hapus 2 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalHapus_2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah anda yakin ingin menghapus data ini?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger" onclick="return konfirmasiHapus_2()">Hapus</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <!-- Start Modal Hapus 3 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalHapus_3">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Hapus</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah anda yakin ingin menghapus data ini?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-danger" onclick="return konfirmasiHapus_3()">Hapus</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    
+    <!-- Start Modal Verifikasi -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalVerifikasi">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Verifikasi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah data yang anda pilih ingin diverifikasi?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary" onclick="return konfirmasiVerifikasi()">Konfirmasi</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+    <!-- Start Modal Verifikasi 2 -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modalVerifikasi_2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Konfirmasi Verifikasi</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Apakah data yang anda pilih ingin diverifikasi?</p>
+            </div>
+            <div class="modal-footer bg-whitesmoke br">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary" onclick="return konfirmasiVerifikasi_2()">Konfirmasi</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- General JS Scripts -->
+    <script src="../../assets/template/modules/jquery.min.js"></script>
+    <script src="../../assets/template/modules/popper.js"></script>
+    <script src="../../assets/template/modules/tooltip.js"></script>
+    <script src="../../assets/template/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/template/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../assets/template/modules/moment.min.js"></script>
+    <script src="../../assets/template/js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="../../assets/template/modules/datatables/datatables.min.js"></script>
+    <script src="../../assets/template/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/template/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+    <script src="../../assets/template/modules/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="../../assets/template/js/page/modules-datatables.js"></script>
+
+    <!-- Template JS File -->
+    <script src="../../assets/template/js/scripts.js"></script>
+    <script src="../../assets/template/js/custom.js"></script>
+
+    <script>
+        // konfirmasi Hapus User
+        function konfirmasiHapus() {
+            let user = document.getElementById("user");
+
+            swal(
+                'Berhasil', 'Data berhasil di hapus!', 'success'
+            ).then((data) => {
+                $("#modalHapus").modal('hide');
+            });
+
+            user.parentElement.removeChild(user); 
+            console.log("User berhasil dihapus");
+        }
+
+        function konfirmasiHapus_2() {
+            let user_2 = document.getElementById("user_2");
+
+            swal(
+                'Berhasil', 'Data berhasil di hapus!', 'success'
+            ).then((data) => {
+                $("#modalHapus_2").modal('hide');
+            });
+
+            user_2.parentElement.removeChild(user_2); 
+            console.log("User berhasil dihapus");
+        }
+
+        function konfirmasiHapus_3() {
+            let user_3 = document.getElementById("user_3");
+
+            swal(
+                'Berhasil', 'Data berhasil di hapus!', 'success'
+            ).then((data) => {
+                $("#modalHapus_3").modal('hide');
+            });
+
+            user_3.parentElement.removeChild(user_3); 
+            console.log("User berhasil dihapus");
+        }
+
+        // konfirmasi Verifikasi
+        function konfirmasiVerifikasi() {
+            console.log("berhasil daftar");
+                
+            swal(
+                'Berhasil', 'Data berhasil di verifikasi!', 'success'
+            ).then((data) => {
+                $("#modalVerifikasi").modal('hide');
+            });
+            
+            confirmVerif = document.getElementById("confirmVerif").innerHTML = "<span class='badge badge-success'>Terverifikasi</span>";
+        }
+
+        function konfirmasiVerifikasi_2() {
+            console.log("berhasil daftar");
+                
+            swal(
+                'Berhasil', 'Data berhasil di verifikasi!', 'success'
+            ).then((data) => {
+                $("#modalVerifikasi_2").modal('hide');
+            });
+            
+            confirmVerif_2 = document.getElementById("confirmVerif_2").innerHTML = "<span class='badge badge-success'>Terverifikasi</span>";
+        }
+    </script>
+</body>
+
+</html>

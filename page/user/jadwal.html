@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <title>SISTA - Jadwal Seminar</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../../assets/landingPage/landing/stisla.png">
+    
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="../../assets/template/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/fontawesome/css/all.min.css">
+
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/datatables.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/jquery-selectric/selectric.css">
+    <link rel="stylesheet" href="../../assets/template/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../../assets/template/css/style.css">
+    <link rel="stylesheet" href="../../assets/template/css/components.css">
+</head>
+
+<body class="layout-3">
+    <div id="app">
+        <div class="main-wrapper container">
+            <div class="navbar-bg"></div>
+            <!-- Start Navbar -->
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <a href="dashboard.html" class="navbar-brand sidebar-gone-hide">SISTA</a>
+                <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar">
+                    <i class="fas fa-bars"></i>
+                </a>
+                <form class="form-inline ml-auto">
+                    <ul class="navbar-nav">
+                        <li>
+                            <a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search-element">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-backdrop"></div>
+                    </div>
+                </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img alt="image" src="../../assets/template/img/avatar/avatar-1.png"
+                                class="rounded-circle mr-1">
+                            <div class="d-sm-none d-lg-inline-block">Hi, User</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-title">Login 5 menit lalu</div>
+                            <a href="profile.html" class="dropdown-item has-icon">
+                                <i class="fas fa-user"></i> Profile User
+                            </a>
+                            <a href="pengaturan.html" class="dropdown-item has-icon">
+                                <i class="fas fa-cog"></i> Pengaturan
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../../index.html" class="dropdown-item has-icon text-danger">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <nav class="navbar navbar-secondary navbar-expand-lg">
+                <div class="container">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="dashboard.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a href="jadwal.html" class="nav-link">
+                                <i class="fas fa-calendar-alt"></i>
+                                <span>Jadwal</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="daftarSeminar.html" class="nav-link">
+                                <i class="fas fa-book"></i>
+                                <span>Daftar Seminar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="berita.html" class="nav-link">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Berita</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h1>Jadwal</h1>
+                    </div>
+
+                    <div class="section-body">
+                        <h2 class="section-title">Jadwal</h2>
+                        <p class="section-lead">
+                            Halaman kelola seluruh Jadwal.
+                        </p>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h4>Table Jadwal</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped" id="table-1">
+                                                <thead>
+                                                    <tr class="text-center">
+                                                        <th>NO</th>
+                                                        <th>NIM</th>
+                                                        <th>Mahasiswa/i</th>
+                                                        <th>Seminar</th>
+                                                        <th>Waktu</th>
+                                                        <th>Ruangan</th>
+                                                        <th>Aksi</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr class="text-center">
+                                                        <td>1</td>
+                                                        <td>
+                                                            <span class="badge badge-primary">0102002</span>
+                                                        </td>
+                                                        <td>Diego Armando</td>
+                                                        <td>Proposal</td>
+                                                        <td>10:00, 4-01-2021</td>
+                                                        <td>Online</td>
+                                                        <td>
+                                                            <a href="jadwalDetail.html" class="btn btn-secondary">Detail</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>2</td>
+                                                        <td>
+                                                            <span class="badge badge-primary">0102001</span>
+                                                        </td>
+                                                        <td>Ahmad Budiman</td>
+                                                        <td>Seminar Hasil</td>
+                                                        <td>13:00, 4-01-2021</td>
+                                                        <td>Online</td>
+                                                        <td>
+                                                            <a href="jadwalDetail.html" class="btn btn-secondary">Detail</a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="text-center">
+                                                        <td>3</td>
+                                                        <td>
+                                                            <span class="badge badge-primary">0102040</span>
+                                                        </td>
+                                                        <td>Fradelina Putri</td>
+                                                        <td>Sidang Akhir</td>
+                                                        <td>12:00, 8-01-2021</td>
+                                                        <td>B2-304</td>
+                                                        <td>
+                                                            <a href="jadwalDetail.html" class="btn btn-secondary">Detail</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End Main -->
+
+            <!-- Start Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    &copy; SISTA - SI05 2020
+                </div>
+                <div class="footer-right">
+                    STT Terpadu Nurul Fikri
+                </div>
+            </footer>
+            <!-- End Footer -->
+        </div>
+    </div>
+
+    <!-- General JS Scripts -->
+    <script src="../../assets/template/modules/jquery.min.js"></script>
+    <script src="../../assets/template/modules/popper.js"></script>
+    <script src="../../assets/template/modules/tooltip.js"></script>
+    <script src="../../assets/template/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/template/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../assets/template/modules/moment.min.js"></script>
+    <script src="../../assets/template/js/stisla.js"></script>
+
+    <!-- JS Libraies -->
+    <script src="../../assets/template/modules/datatables/datatables.min.js"></script>
+    <script src="../../assets/template/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="../../assets/template/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+    <script src="../../assets/template/modules/jquery-selectric/jquery.selectric.min.js"></script>
+    <script src="../../assets/template/modules/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Page Specific JS File -->
+    <script src="../../assets/template/js/page/modules-datatables.js"></script>
+
+    <!-- Template JS File -->
+    <script src="../../assets/template/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN SISTA - Profile Admin</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../../assets/landingPage/landing/stisla.png">
+
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="../../assets/template/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/template/modules/fontawesome/css/all.min.css">
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../../assets/template/css/style.css">
+    <link rel="stylesheet" href="../../assets/template/css/components.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main-wrapper main-wrapper-1">
+            <div class="navbar-bg"></div>
+            <!-- Start Navbar -->
+            <nav class="navbar navbar-expand-lg main-navbar">
+                <form class="form-inline mr-auto">
+                    <ul class="navbar-nav mr-3">
+                        <li>
+                            <a href="#" data-toggle="sidebar" class="nav-link nav-link-lg">
+                                <i class="fas fa-bars"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="search-element">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
+                        <button class="btn" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <div class="search-backdrop"></div>
+                    </div>
+                </form>
+                <ul class="navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+                            <img alt="image" src="../../assets/template/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                            <div class="d-sm-none d-lg-inline-block">Hi, Admin</div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <div class="dropdown-title">Login 5 menit lalu</div>
+                            <a href="profileAdmin.html" class="dropdown-item has-icon">
+                                <i class="far fa-user"></i> Profile Admin
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="../../index.html" class="dropdown-item has-icon text-danger">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Navbar -->
+
+            <!-- Start Sidebar -->
+            <div class="main-sidebar sidebar-style-2">
+                <aside id="sidebar-wrapper">
+                    <div class="sidebar-brand">
+                        <a href="dashboard.html">SISTA</a>
+                    </div>
+                    <div class="sidebar-brand sidebar-brand-sm">
+                        <a href="dashboard.html">SIS</a>
+                    </div>
+                    <ul class="sidebar-menu">
+                        <li class="menu-header">Dashboard</li>
+                        <li>
+                            <a href="dashboard.html" class="nav-link">
+                                <i class="fas fa-home"></i>
+                                <span>Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="menu-header">Kelola Admin</li>
+                        <li>
+                            <a href="daftarSeminar.html" class="nav-link">
+                                <i class="fas fa-book"></i>
+                                <span>Daftar Seminar TA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pemakalahSeminar.html" class="nav-link">
+                                <i class="fas fa-address-book"></i>
+                                <span>Pemakalah Seminar TA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="pendaftaranPesertaSeminar.html" class="nav-link">
+                                <i class="fas fa-user-friends"></i>
+                                <span>Daftar Peserta Seminar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="registrasiUser.html" class="nav-link">
+                                <i class="fas fa-users-cog"></i>
+                                <span>Registrasi User</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <!-- End Sidebar -->
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <section class="section">
+                    <div class="section-header">
+                        <h1>Profile</h1>
+                        <div class="section-header-breadcrumb">
+                            <div class="breadcrumb-item active"><a href="dashboard.html">Dashboard</a></div>
+                            <div class="breadcrumb-item">Profile Admin</div>
+                        </div>
+                    </div>
+                    <div class="section-body">
+                        <h2 class="section-title">Profile</h2>
+                        <p class="section-lead">Halaman Profile Admin.</p>
+                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="alert alert-info alert-dismissible show fade">
+                                    <div class="alert-body">
+                                        <button class="close" data-dismiss="alert">
+                                            <span>x</span>
+                                        </button>
+                                        
+                                        <span style="font-size: 16px;">
+                                            <i class="fas fa-info pr-2"></i>
+                                            <strong> 
+                                                klik Edit Profile jika anda ingin mengubah data pada akun anda.
+                                            </strong>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="card card-primary">
+                                    <div class="card-header">
+                                        <h4>Foto Profile</h4>
+                                    </div>
+                                    <div class="card-body align-self-center">
+                                        <img src="../../assets/template/img/avatar/avatar-1.png" alt="Profile User" style="height: 185px; width: 185px;">
+                                    </div>
+                                </div>
+
+                                <a href="profileEdit.html" class="btn btn-warning w-100 mb-3">Edit Profile</a>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card card-primary" id="mycard-dimiss">
+                                    <div class="card-header">
+                                        <h4>Detail Data</h4>
+
+                                        <div class="card-header-action">
+                                            <a data-collapse="#mycard-collapse" class="btn btn-icon btn-info btn-sm" href="#"><i class="fas fa-minus"></i></a>
+                                            <a data-dismiss="#mycard-dimiss" class="btn btn-icon btn-danger btn-sm" href="#"><i class="fas fa-times"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="collapse show" id="mycard-collapse">
+                                        <div class="card-body">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Username</label>
+                                                        <p class="form-control bg bg-secondary">Admin SISTA</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Email</label>
+                                                        <p class="form-control bg bg-secondary">admin@gmail.com</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-7">
+                                                    <div class="form-group">
+                                                        <label>Jenis Kelamin</label>
+                                                        <p class="form-control bg bg-secondary">Laki-laki</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="form-group">
+                                                        <label>Tanggal Lahir</label>
+                                                        <p class="form-control bg bg-secondary">27 Desember 1999</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- End Content -->
+
+            <!-- Start Footer -->
+            <footer class="main-footer">
+                <div class="footer-left">
+                    &copy; SISTA - SI05 2020
+                </div>
+                <div class="footer-right">
+                    STT Terpadu Nurul Fikri
+                </div>
+            </footer>
+            <!-- End Footer -->
+        </div>
+    </div>
+
+    <!-- General JS Scripts -->
+    <script src="../../assets/template/modules/jquery.min.js"></script>
+    <script src="../../assets/template/modules/popper.js"></script>
+    <script src="../../assets/template/modules/tooltip.js"></script>
+    <script src="../../assets/template/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/template/modules/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="../../assets/template/modules/moment.min.js"></script>
+    <script src="../../assets/template/js/stisla.js"></script>
+
+    <script src="../../assets/template/modules/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Template JS File -->
+    <script src="../../assets/template/js/scripts.js"></script>
+</body>
+
+</html>

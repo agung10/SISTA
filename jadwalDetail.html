@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SISTA - Detail Jadwal</title>
+
+    <!-- Icon -->
+    <link rel="shortcut icon" href="assets/landingPage/landing/stisla.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/landingPage/dist/modules/prism/prism.css">
+    <link rel="stylesheet" href="assets/landingPage/dist/modules/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/landingPage/dist/modules/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/landingPage/dist/modules/chocolat/dist/css/chocolat.css">
+    <link rel="stylesheet" href="assets/landingPage/dist/css/style.css">
+    <link rel="stylesheet" href="assets/landingPage/dist/css/custom.css">
+    <link rel="stylesheet" href="assets/landingPage/landing/style.css">
+</head>
+
+<body>
+    <!-- Start Navbar -->
+    <nav class="navbar navbar-reverse navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">SISTA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto ml-lg-3 align-items-lg-center">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="jadwal.html" class="nav-link">Jadwal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link" id="konfirmasiDaftar">Daftar Seminar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="berita.html" class="nav-link">Berita</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto align-items-lg-center d-none d-lg-block">
+                    <li class="ml-lg-3 nav-item">
+                        <a href="auth/login.html" class="btn btn-round btn-icon icon-left">
+                            <i class="fas fa-sign-in-alt"></i> Masuk
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+    <!-- Start Content -->
+    <div class="hero-mini hero-mini-sm">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <h1>Detail Jadwal</h1>
+                    <div class="your-breadcrumb">
+                        <div class="breadcrumb-item">
+                            <a href="index.html" style="text-decoration: none;">Home</a>
+                        </div>
+                        <div class="breadcrumb-item">
+                            <a href="jadwal.html" style="text-decoration: none;">Jadwal</a>
+                        </div>
+                        <div class="breadcrumb-item">Detail Jadwal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <h4>Seminar Proposal</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <table style="font-size: 15px;">
+                                <tr>
+                                    <td>NIM</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">0102002</td>
+                                </tr>
+                                <tr>
+                                    <td>Seminar Mahasiswa</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">Diego Armando</td>
+                                </tr>
+                                <tr>
+                                    <td>Prodi</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">Teknik Informatika</td>
+                                </tr>
+                                <tr>
+                                    <td>Judul</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">Rancang Bangun Aplikasi Seminar Tugas Akhir Menggunakan MVC Framework</td>
+                                </tr>
+                                <tr>
+                                    <td>Waktu</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">Senin, 4 Januari 2020, Jam: 10:00 WIB</td>
+                                </tr>
+                                <tr>
+                                    <td>Ruang</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">Zoom Online</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-md-4">
+                            <table style="font-size: 15px;">
+                                <tr>
+                                    <td>Pembimbing</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">Sirojul Munir S.SI, M.KOM</td>
+                                </tr>
+                                <tr>
+                                    <td>Penguji</td>
+                                    <td class="pl-1">:</td>
+                                    <td class="pl-2">Ahmad Rio M.SI</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a class="btn btn-primary text-white" id="konfirmasiDaftarPeserta">Daftar Peserta</a>
+        </div>
+    </section>
+    <!-- End Content -->
+
+    <!-- Start Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3 class="text-capitalize">SISTA</h3>
+                    <div class="pr-lg-5">
+                        <p>SISTA dibuat oleh Kelompok 4 - Sistem Informasi 05 untuk membantu dalam melihat informasi mengenai jadwal seminar tugas akhir, dan juga sebagai tugas Project</p>
+                        <p>&copy; SISTA - SI05 2020</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4>Tim</h4>
+                            <ul>
+                                <li>
+                                    <a style="color: rgba(255,255,255,.6);">Agung Mubarok</a>
+                                </li>
+                                <li>
+                                    <a style="color: rgba(255,255,255,.6);">Annisa Putri Anggraini</a>
+                                </li>
+                                <li>
+                                    <a style="color: rgba(255,255,255,.6);">Muhammad Fata Sidqi</a>
+                                </li>
+                                <li>
+                                    <a style="color: rgba(255,255,255,.6);">Reza Prasetyo</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h4>Sosial Media</h4>
+                            <div class="social-links">
+                                <ul>
+                                    <li>
+                                        <a href="https://github.com/agung10" target="_blank">
+                                           <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/agung_mubarok/" target="_blank">
+                                           <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://twitter.com/dev_root01" target="_blank">
+                                           <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/531naufal" target="_blank">
+                                           <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="https://www.linkedin.com/in/agungmubarok/" target="_blank">
+                                           <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/anissaputrianggraini" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/___anisaaaa___/" target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/mfatasdq" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/mfatasdq/" target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://twitter.com/FataSidqi" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="https://www.facebook.com/wayne.fata" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/reza0622" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="https://www.instagram.com/prasz65_/" target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                        </a>
+                                        <a href="https://twitter.com/prasz65_" target="_blank">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- JS Libraies -->
+    <script src="assets/template/modules/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Start Script -->
+    <script src="assets/landingPage/dist/modules/jquery.min.js"></script>
+    <script src="assets/landingPage/dist/modules/popper.js"></script>
+    <script src="assets/landingPage/dist/modules/tooltip.js"></script>
+    <script src="assets/landingPage/dist/modules/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/landingPage/dist/modules/prism/prism.js"></script>
+    <script src="assets/landingPage/dist/js/stisla.js"></script>
+    <script src="assets/landingPage/landing/script.js"></script>
+    <!-- End Script -->
+
+    <script>
+        $("#konfirmasiDaftar").click(function () {
+            swal({
+                title: 'Konfirmasi Daftar',
+                text: 'Anda harus mendaftar terlebih dahulu, silahkan klik OK untuk lanjut daftar!',
+                icon: 'info',
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location = "auth/register.html"
+                }
+            });
+
+            return false;
+        });
+    </script>
+
+    <script>
+        $("#konfirmasiDaftarPeserta").click(function () {
+            swal({
+                title: 'Konfirmasi Daftar',
+                text: 'Anda harus mendaftar terlebih dahulu, silahkan klik OK untuk lanjut daftar!',
+                icon: 'info',
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                    window.location = "auth/register.html"
+                }
+            });
+            return false;
+        });
+    </script>
+</body>
+
+</html>
